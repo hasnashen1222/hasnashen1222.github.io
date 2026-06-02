@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝒲ℯ𝓁𝒸ℴ𝓂ℯ 𝓉ℴ Blind box game</title>
+    <style>
+       
+       body {
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 600px;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-out;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        p {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); 
+        
+        }
+        .welcome-text {
+            font-size: 1.7rem;
+            text-shadow: 3px 3px 6px rgba(238, 144, 180, 0.5);
+            cursor: pointer;
+        }
+
+        .welcome-text {
+            font-size: 1.4rem;
+            text-shadow: 3px 3px 6px rgba(223, 144, 157, 0.5);
+            color: rgba(160, 58, 58, 0.8); 
+        }
+
+        .enter-btn {
+            padding: 15px 50px;
+            font-size: 1.3rem;
+            background: #99d2e0;
+            color: rgb(253, 236, 162);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(230, 155, 233, 0.4);
+        }
+        
+        .enter-btn:hover {
+            background: #fa9bb0;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(250, 146, 172, 0.6);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            background-image: url('sanrio1106.4.jpg'); 
+            background-size: cover; 
+            background-attachment: fixed; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>𝒲ℯ𝓁𝒸ℴ𝓂ℯ 𝓉ℴ Blind Box Game</h1>
+        <p><span class="welcome-text">🎀Enjoy!🎀</span><br>🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸</p>
+        <button class="enter-btn" onclick="goToChoosepage()">Go to choose your favourite theme</button>
+    </div>
+
+    <script>
+        function goToChoosepage() {
+            window.location.href = "Choosepage.html";
+        }
+       
+        document.addEventListener('keydown', function(event) {
+            if (event.code === 'Enter') {
+                goToChoosepage();
+            }
+        });
+    </script>
+</body>
+</html>
