@@ -1,12 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanrio Blind Box</title>
+    <title>Sanrio Gacha Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="theme-page sanrio-bg">
+
+    <button class="back-btn" onclick="window.location.href='index.html'">Homepage</button>
+
+    <h1>Sanrio Gacha Game</h1>
     
-    
+    <div class="stage">
+        <p>Click the Button!</p>
+        
+        <div class="box-container" id="blindBox" onclick="drawGacha('sanrio')">🎁</div>
+        
+        <button class="btn" onclick="drawGacha('sanrio')">Have a Try!</button>
+        
+        <div class="result-panel">
+            <p id="defaultText">Good Luck!</p>
+
+            <div class="character-card" id="card-sanrio-1">
+                <img src="这里放帕恰狗图片链接" alt="角色">
+                <p class="name">帕恰狗</p>
+                <span class="rarity-tag tag-common">Normal</span>
+            </div>
+            <div class="character-card" id="card-sanrio-2">
+                <img src="melody.webp" alt="角色">
+                <p class="name">Melody</p>
+                <span class="rarity-tag tag-common">Normal</span>
+            </div>
+            <div class="character-card" id="card-sanrio-3">
+                <img src="Cinnamon.webp" alt="角色">
+                <p class="name">Cinnamon</p>
+                <span class="rarity-tag tag-common">Normal</span>
+            </div>
+            <div class="character-card" id="card-sanrio-4">
+                <img src="kuromi.webp" alt="角色">
+                <p class="name">Kuromi</p>
+                <span class="rarity-tag tag-hidden">★Hidden Style★</span>
+            </div>
+            <div class="character-card" id="card-sanrio-5">
+                <img src="kitty" alt="角色">
+                <p class="name">Hello Kitty</p>
+                <span class="rarity-tag tag-hidden">★Hidden Style★</span>
+            </div>
+            <div class="character-card" id="card-sanrio-6">
+                <img src="pompompurin.webp" alt="角色">
+                <p class="name">Pompompurin</p>
+                <span class="rarity-tag tag-hidden">★Hidden Style★</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
