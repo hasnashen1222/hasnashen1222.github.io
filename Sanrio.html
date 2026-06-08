@@ -3,58 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanrio Gacha Game</title>
+    <title>Welcome to Sanrio Theme Gacha Game</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .images-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+            justify-content: flex-start;
+        }
+        
+        .image-item {
+            flex: 1 1 calc(33.33% - 20px);
+            min-width: 250px;
+            max-width: 350px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        
+        .image-container {
+            margin-bottom: 15px;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        .city-title {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+        }
+        
+        .country-title {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            padding: 15px 50px;
+            font-size: 1.3rem;
+            text-align: center; 
+            background: #fab9cd;
+            outline: 0.5rem solid rgb(233, 216, 139);
+            color: rgb(61, 45, 12);
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(230, 155, 233, 0.4);
+        }
+
+
+        img {
+            border: 4px solid var(--secondary) !important;
+            border-radius: 16px !important;
+            background: var(--primary) !important;
+        }
+
+
+        .center-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 85vh;
+            text-align: center;
+        }
+
+        .center-container h1 {
+            margin-bottom: 20px !important;
+            color: #333;
+        }
+
+        .cover-photo {
+            max-width: 450px;
+            width: 90%;
+            height: auto;
+            margin-bottom: 30px !important;
+        }
+
+        .action-btn {
+            font-size: 1.2rem !important;
+            padding: 12px 35px !important;
+            background-color: #ffffff !important;
+            color: #7b4614 !important;
+            font-weight: bold;
+            border: 3px solid #ffb6c1 !important;
+            border-radius: 25px !important;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .action-btn:hover {
+            background-color: #fff0f5 !important;
+            border-color: #ff69b4 !important;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 1200px) {
+            .image-item {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .image-item {
+                flex: 1 1 100%;
+                max-width: 400px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .images-container {
+                gap: 15px;
+            }
+            
+            .image-item {
+                flex: 1 1 100%;
+                min-width: 200px;
+            }
+            
+            .image-container img {
+                max-width: 300px;
+            }
+        }
+    </style>    
+
 </head>
-<body class="theme-page sanrio-bg">
+<body class="theme-page sanrio-cover-bg">
 
-    <button class="back-btn" onclick="window.location.href='index.html'">Homepage</button>
+    <button class="back-btn" onclick="window.location.href='Choosepage.html'">Back to Theme Selection</button>
 
-    <h1>Sanrio Gacha Game</h1>
-    
-    <div class="stage">
-        <p>Click the Button!</p>
+    <div class="center-container">
+        <h1>Welcome to Sanrio Theme Gacha Game</h1>
         
-        <div class="box-container" id="blindBox" onclick="drawGacha('sanrio')">🎁</div>
+        <img src="Sanrio.webp" alt="Sanrio Stars" class="cover-photo">
         
-        <button class="btn" onclick="drawGacha('sanrio')">Have a Try!</button>
-        
-        <div class="result-panel">
-            <p id="defaultText">Good Luck!</p>
-
-            <div class="character-card" id="card-sanrio-1">
-                <img src="这里放帕恰狗图片链接" alt="角色">
-                <p class="name">帕恰狗</p>
-                <span class="rarity-tag tag-common">Normal</span>
-            </div>
-            <div class="character-card" id="card-sanrio-2">
-                <img src="melody.webp" alt="角色">
-                <p class="name">Melody</p>
-                <span class="rarity-tag tag-common">Normal</span>
-            </div>
-            <div class="character-card" id="card-sanrio-3">
-                <img src="Cinnamon.webp" alt="角色">
-                <p class="name">Cinnamon</p>
-                <span class="rarity-tag tag-common">Normal</span>
-            </div>
-            <div class="character-card" id="card-sanrio-4">
-                <img src="kuromi.webp" alt="角色">
-                <p class="name">Kuromi</p>
-                <span class="rarity-tag tag-hidden">★Hidden Style★</span>
-            </div>
-            <div class="character-card" id="card-sanrio-5">
-                <img src="kitty" alt="角色">
-                <p class="name">Hello Kitty</p>
-                <span class="rarity-tag tag-hidden">★Hidden Style★</span>
-            </div>
-            <div class="character-card" id="card-sanrio-6">
-                <img src="pompompurin.webp" alt="角色">
-                <p class="name">Pompompurin</p>
-                <span class="rarity-tag tag-hidden">★Hidden Style★</span>
-            </div>
-        </div>
+        <button class="action-btn" onclick="window.location.href='sanrio2.html'">ENTER GACHA !</button>
     </div>
 
-    <script src="script.js"></script>
 </body>
 </html>

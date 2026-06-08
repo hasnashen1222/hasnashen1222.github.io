@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Chiikawa Theme Gacha Game</title>
+    <title>Congratulations</title>
     <link rel="stylesheet" href="style.css">
 
     <style>
@@ -60,51 +60,45 @@
             box-shadow: 0 5px 15px rgba(230, 155, 233, 0.4);
         }
 
-
         img {
             border: 4px solid var(--secondary) !important;
             border-radius: 16px !important;
             background: var(--primary) !important;
         }
 
-
-        .center-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 85vh;
-            text-align: center;
-        }
-
-        .center-container h1 {
-            margin-bottom: 20px !important;
-            color: #333;
-        }
-
-        .cover-photo {
-            max-width: 450px;
-            width: 90%;
+        .center-container .single-card img.role-img {
+            max-width: 250px; 
+            width: 100%;
             height: auto;
-            margin-bottom: 30px !important;
+            margin: 0 auto 15px auto;
+            display: block;
         }
 
-        .action-btn {
-            font-size: 1.2rem !important;
-            padding: 12px 35px !important;
-            background-color: #ffffff !important;
-            color: #7b4614 !important;
+        .center-container .single-card .role-name {
+            margin-bottom: 2px;
+        }
+
+        .center-container .single-card .rarity-tag {
+            font-size: 1.5rem;
+            display: inline-block;
+            margin-top: 0px;
+        }
+
+        .center-container .retry-btn {
+            font-size: 1.2rem;
+            padding: 10px 30px;
+            margin-top: 25px;
+            background-color: #ffffff;
+            color: #7b4614;
             font-weight: bold;
-            border: 3px solid #ffb6c1 !important;
-            border-radius: 25px !important;
+            border: 3px solid #ffb6c1;
+            border-radius: 8px;
             cursor: pointer;
-            transition: all 0.2s ease;
         }
 
-        .action-btn:hover {
-            background-color: #fff0f5 !important;
-            border-color: #ff69b4 !important;
-            transform: scale(1.05);
+        .center-container .retry-btn:hover {
+            background-color: #fff0f5;
+            border-color: #ff69b4;
         }
 
         @media (max-width: 1200px) {
@@ -137,16 +131,18 @@
     </style>    
 
 </head>
-<body class="theme-page Chiikawa-cover-bg">
+<body class="theme-page result-bg">
 
-    <button class="back-btn" onclick="window.location.href='Choosepage.html'">Back to Theme Selection</button>
-
-    <div class="center-container">
-        <h1>Welcome to Chiikawa Theme Gacha Game</h1>
+    <div class="center-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh;">
+        <h1 class="congrats-title">-🎉 𝐂𝐨𝐧𝐠𝐫𝐚𝐭𝐮𝐥𝐚𝐭𝐢𝐨𝐧𝐬 🎉-</h1>
         
-        <img src="Chiikawa.webp" alt="Chiikawa Stars" class="cover-photo">
+        <div class="single-card" style="text-align: center;">
+            <img src="rakko.webp" alt="Rakko" class="role-img">
+            <h2 class="role-name">Rakko</h2>
+            <span class="rarity-tag tag-common">（ 𝑪𝒐𝒎𝒎𝒐𝒏 ）</span>
+        </div>
         
-        <button class="action-btn" onclick="window.location.href='chiikawa2.html'">ENTER GACHA !</button>
+        <button class="action-btn retry-btn" onclick="window.location.href='chiikawa2.html'">TRY AGAIN</button>
     </div>
 
 </body>
